@@ -23,4 +23,12 @@ public class CalculatorTest {
         int res = calc.multiply(2,3);
         assertEquals(6, res);
     }
+
+    @Test
+    void testDivide() throws Exception {
+        int res = calc.divide(4,2);
+        assertEquals(2, res);
+        assertThrowsExactly(Exception.class, () -> calc.divide(5,0));
+        assertDoesNotThrow(() -> calc.divide(5, 3));
+    }
 }
