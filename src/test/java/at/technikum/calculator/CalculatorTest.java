@@ -17,4 +17,10 @@ public class CalculatorTest {
         int res = calc.sum(1,3);
         assertEquals(4, res);
     }
+
+    @Test
+    void testMultiply(){
+        int res = calc.multiply(2,3);
+        assertEquals(6, res);
+    }
 }
